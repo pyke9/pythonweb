@@ -6,7 +6,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 cryptography==43.0.0
-Flask>=2.0,<3.0   # Đảm bảo Flask trong phạm vi 2.x
+Flask>=2.0,<3.0
 idna==3.7
 itsdangerous==2.2.0
 Jinja2==3.1.4
@@ -19,7 +19,7 @@ requests==2.32.3
 setuptools==71.0.4
 soupsieve==2.5
 wechatpy==1.8.18
-Werkzeug==2.3.4    # Bạn cần giảm xuống phiên bản dưới 3.0 để phù hợp với Flask 2.x
+Werkzeug==2.3.4
 wheel==0.43.0
 xmltodict==0.13.0
 zhdate==0.1
@@ -27,3 +27,4 @@ flask_sqlalchemy==2.5.1
 flask-wtf==1.0.1
 flask-login==0.6.2
 flask-migrate==3.0.0
+pandas==1.5.3  # Thêm pandas vào đây
