@@ -168,4 +168,6 @@ def add_comment(blog_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+   # app.run(debug=True)
+    # Đảm bảo ứng dụng lắng nghe trên tất cả các IP và cổng 10000
+    app.run(host="0.0.0.0", port=10000)
