@@ -1,12 +1,12 @@
 name: test
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - python=3.10
   - flask
   - pytest
   - numpy
-  - pandas
   - requests
   - pip
   - pip:
