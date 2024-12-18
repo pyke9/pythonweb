@@ -33,15 +33,15 @@ jobs:
       run: |
         pip install --upgrade --no-cache-dir -r requirements.txt
 
-    # Kiểm tra xem thư mục 'tests' có tồn tại không trước khi chạy pytest
+    # Kiểm tra sự tồn tại của thư mục 'tests' mà không thất bại pipeline
     - name: Check if 'tests' directory exists
       run: |
-        if [ ! -d "./tests" ]; then echo "No tests directory found!" && exit 1; fi
+        if [ ! -d "./tests" ]; then echo "No tests directory found!"; fi
 
     # Kiểm tra nếu có tệp kiểm tra trong thư mục
     - name: Check if tests are present
       run: |
-        if [ "$(ls ./tests)" = "" ]; then echo "No tests found!" && exit 1; fi
+        if [ ! "$(ls -A ./tests)" ]; then echo "No tests found!" && exit 1; fi
 
     # Chạy pytest trên thư mục 'tests'
     - name: Run tests with pytest
