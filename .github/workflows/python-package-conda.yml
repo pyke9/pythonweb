@@ -20,18 +20,18 @@ jobs:
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
-        python-version: 3.10
+        python-version: 3.10  # Hoặc chỉnh lại nếu dùng version khác
         environment-file: environment.yml
-        activate-environment: test # Tên environment trong file environment.yml
+        activate-environment: test
 
     - name: Check conda info
-      run: conda info # Kiểm tra thông tin Conda sau khi setup
+      run: conda info  # Kiểm tra thông tin về môi trường Conda
 
     - name: Verify Conda environment
-      run: conda info --envs  # Liệt kê các environment đã tạo
+      run: conda info --envs  # Kiểm tra môi trường conda hiện có
 
     - name: Install dependencies from environment.yml
-      run: conda env update --file environment.yml --name test  # Cập nhật môi trường từ environment.yml
+      run: conda env update --file environment.yml --name test  # Cập nhật môi trường từ file environment.yml
 
     - name: Lint with flake8
       run: |
