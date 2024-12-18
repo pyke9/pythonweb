@@ -23,8 +23,10 @@ jobs:
 
     - name: Install dependencies from requirements.txt
       run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt  # Cài đặt dependencies từ requirements.txt
+        pip install --upgrade pip setuptools  # Cập nhật pip và setuptools
+        pip install --upgrade urllib3         # Cập nhật urllib3
+        pip install -r requirements.txt       # Cài đặt các dependency từ requirements.txt
+
 
     - name: Lint with flake8
       run: |
