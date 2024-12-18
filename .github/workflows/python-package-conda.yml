@@ -19,14 +19,13 @@ jobs:
     - name: Set up Python 3.x
       uses: actions/setup-python@v3
       with:
-        python-version: '3.10'  # Cập nhật version Python tùy nhu cầu của bạn
+        python-version: '3.10'  # Hoặc phiên bản Python bạn đang sử dụng
 
-    - name: Install dependencies from requirements.txt
+    - name: Install pip, urllib3 and six
       run: |
-        pip install --upgrade pip setuptools  # Cập nhật pip và setuptools
-        pip install --upgrade urllib3         # Cập nhật urllib3
-        pip install -r requirements.txt       # Cài đặt các dependency từ requirements.txt
-
+        pip install --upgrade pip setuptools
+        pip install --upgrade urllib3 six   # Cập nhật urllib3 và six
+        pip install -r requirements.txt     # Cài đặt các dependencies từ requirements.txt
 
     - name: Lint with flake8
       run: |
