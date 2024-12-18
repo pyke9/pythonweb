@@ -27,5 +27,6 @@ flask_sqlalchemy==2.5.1
 flask-wtf==1.0.1
 flask-login==0.6.2
 flask-migrate==3.0.0
-pandas==1.5.3  # Phiên bản pandas mới đã hỗ trợ numpy tương thích
-numpy==1.23.5  # Thêm numpy phiên bản tương thích
+pandas==1.5.3
+numpy==1.23.5
+sqlalchemy==1.4.44  # Phiên bản SQLAlchemy tương thích với Flask-SQLAlchemy
